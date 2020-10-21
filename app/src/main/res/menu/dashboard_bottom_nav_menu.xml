@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/item_hutang"
+        android:title="Utang"
+        android:icon="@drawable/ic_assignment_ind"
+        android:enabled="true"/>
+
+    <item android:id="@+id/item_transaksi"
+        android:title="Transaksi"
+        android:icon="@drawable/ic_assignment"
+        android:enabled="true"/>
+
+    <item android:id="@+id/item_profile"
+        android:title="Profil"
+        android:icon="@drawable/ic_account_circle"/>
+</menu>

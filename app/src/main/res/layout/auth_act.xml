@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auth.AuthActivity">
+
+    <com.synnapps.carouselview.CarouselView
+        android:id="@+id/carouselview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:fillColor="#FFFFFFFF"
+        app:pageColor="#00000000"
+        app:radius="6dp"
+        app:indicatorMarginVertical="150dp"
+        app:slideInterval="3000"
+        app:strokeColor="#FF777777"
+        app:strokeWidth="1dp"/>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:background="@color/global_grey"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_start"
+            android:backgroundTint="@color/sunflower_yellow_gold"
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_marginHorizontal="@dimen/spacing_large"
+            android:text="@string/lable_start_to_use"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            style="@style/semi_bold_14_black"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:text="@string/label_privacy_policy"
+            android:layout_marginVertical="@dimen/spacing_large"
+            android:layout_marginHorizontal="@dimen/spacing_xlarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

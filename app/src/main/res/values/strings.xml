@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">I-OIA Book</string>
+    <string name="label_ioia_book">I-OIA Book</string>
+    <string name="label_open_drawer">Open navigation drawer</string>
+    <string name="label_close_drawer">Close navigation drawer</string>
+    <string name="lable_start_to_use">Mulai Gunakan I-OIA Book</string>
+    <string name="label_privacy_policy">Dengan melanjutkan, Anda setuju dengan syarat ketentuan dan privacy policy</string>
+    <string name="label_phone_verf">Verifikasi Nomor Ponsel Anda</string>
+    <string name="label_send_otp">Kami akan mengirimkan OTP untuk memverifikasi nomor telepon Anda.</string>
+    <string name="label_use_wa">Gunakan WhatsApp</string>
+    <string name="label_use_sms">Gunakan SMS</string>
+
+    <string name="hello_blank_fragment">Ano</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_day"
+        android:title="Hari ini"/>
+
+    <item
+        android:id="@+id/item_yesterday"
+        android:title="Kemarin"/>
+
+    <item
+        android:id="@+id/item_7_day"
+        android:title="7 hari terakhir"/>
+
+    <item
+        android:id="@+id/item_30_day"
+        android:title="30 hari terakhir"/>
+
+    <item
+        android:id="@+id/item_pick_date"
+        android:title="Pilih tanggal"/>
+
+    <item
+        android:id="@+id/item_pick_range_date"
+        android:title="Pilih rentang tanggal"/>
+
+</menu>

@@ -1,0 +1,143 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- region Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!--endregion-->
+
+    <!-- region Weight Option-->
+    <style name="label_tint">
+        <item name="android:textFontWeight" tools:targetApi="p">100</item>
+    </style>
+
+    <style name="label_extra_light">
+        <item name="android:textFontWeight" tools:targetApi="p">200</item>
+    </style>
+
+    <style name="label_light">
+        <item name="android:textFontWeight" tools:targetApi="p">300</item>
+    </style>
+
+    <style name="label_regular">
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+
+    <style name="label_medium">
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+
+    <style name="label_semi_bold">
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+
+    <style name="label_bold">
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+
+    <style name="label_extra_bold">
+        <item name="android:textFontWeight" tools:targetApi="p">800</item>
+    </style>
+    <!-- endregion-->
+
+    <!-- region label style-->
+    <style name="semi_bold_18_black" parent="label_semi_bold">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/global_black</item>
+    </style>
+
+    <style name="semi_bold_18_white" parent="label_semi_bold">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/global_white</item>
+    </style>
+
+    <style name="semi_bold_24_white" parent="label_semi_bold">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/global_white</item>
+    </style>
+
+    <style name="semi_bold_18_green_kermit" parent="label_semi_bold">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/kermit_green</item>
+    </style>
+
+    <style name="regular_18_green_kermit" parent="label_regular">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/kermit_green</item>
+    </style>
+
+    <style name="regular_16_green_kermit" parent="label_regular">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/kermit_green</item>
+    </style>
+
+    <style name="semi_bold_18_pastel_red" parent="label_semi_bold">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/pastel_red</item>
+    </style>
+
+    <style name="regular_18_pastel_red" parent="label_regular">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/pastel_red</item>
+    </style>
+
+    <style name="bold_1_pastel_red" parent="label_bold">
+        <item name="android:textSize">36sp</item>
+        <item name="android:textColor">@color/pastel_red</item>
+    </style>
+
+    <style name="regular_16_pastel_red" parent="label_regular">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/pastel_red</item>
+    </style>
+
+    <style name="semi_bold_16_primary_color" parent="label_semi_bold">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="semi_bold_16_black" parent="label_semi_bold">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/global_black</item>
+    </style>
+
+    <style name="semi_bold_16_sunflower_yellow_gold" parent="label_semi_bold">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/sunflower_yellow_gold</item>
+    </style>
+
+    <style name="bold_16_pastel_red" parent="label_bold">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/pastel_red</item>
+    </style>
+
+    <style name="semi_bold_14_brownish_grey" parent="label_semi_bold">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/brownish_grey</item>
+    </style>
+
+    <style name="semi_bold_14_black" parent="label_semi_bold">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/global_black</item>
+    </style>
+
+    <style name="semi_bold_16_greyish_brown" parent="label_semi_bold">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/greyish_brown</item>
+    </style>
+
+    <style name="semi_bold_30_black" parent="label_semi_bold">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/global_black</item>
+    </style>
+
+    <style name="semi_bold_26_black" parent="label_semi_bold">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/global_black</item>
+    </style>
+    <!--    endregion-->
+
+</resources>

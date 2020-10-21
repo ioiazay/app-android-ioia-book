@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewmodel"
+            type="com.ioia.book.business.add_business.AddBusinessViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".business.add_business.AddBusinessActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                app:titleTextColor="@color/global_white"
+                app:title="Tambah Usaha Baru"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <FrameLayout
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:paddingTop="@dimen/spacing_xxlarge"
+                android:paddingHorizontal="@dimen/spacing_xlarge"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:tint="@color/colorPrimary"
+                        android:src="@drawable/store"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/il_add_business"
+                        android:layout_marginLeft="@dimen/spacing_large"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:text="@={viewmodel.name}"
+                            android:inputType="text"
+                            android:hint="Masukkan Nama Usaha"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:tint="@color/colorPrimary"
+                        android:src="@drawable/ic_menu"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/il_add_business_type"
+                        android:hint="Pilih Tipe Usaha"
+                        android:layout_marginLeft="@dimen/spacing_large"
+                        app:endIconMode="custom"
+                        app:endIconDrawable="@drawable/ic_keyboard_arrow_down"
+                        app:endIconTint="@color/colorPrimary"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:onClick="@{viewmodel::openBusinessTypePage}"
+                            android:text="@={viewmodel.type}"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:inputType="none"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_lanjut"
+                android:onClick="@{viewmodel::addBusiness}"
+                android:text="Lanjut"
+                android:paddingVertical="@dimen/spacing_large"
+                android:layout_margin="@dimen/spacing_large"
+                android:layout_gravity="bottom"
+                android:textAllCaps="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:visibility="@{viewmodel.isBusinessTypeOpen? View.VISIBLE:View.GONE}"
+                android:elevation="@dimen/spacing_middle"
+                android:background="#70000000"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/spacing_large"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:padding="@dimen/spacing_large"
+                        android:background="@color/colorPrimary"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:gravity="top|center"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_marginLeft="30dp"
+                                android:tint="@color/white"
+                                android:src="@drawable/store"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"/>
+
+                            <ImageView
+                                android:onClick="@{viewmodel::openBusinessTypePage}"
+                                android:src="@drawable/ic_close"
+                                android:tint="@color/white"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            style="@style/semi_bold_18_white"
+                            android:gravity="center"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:text="Pilih Tipe Usahamu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:background="@color/global_white"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_business_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

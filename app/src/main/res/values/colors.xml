@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="pastel_red">#eb4e4e</color>
+    <color name="pastel_red_07">#b3eb4e4e</color>
+    <color name="sunflower_yellow">#ffe300</color>
+    <color name="sunflower_yellow_gold">#ffcf00</color>
+    <color name="dark_sky_blue">#59aade</color>
+    <color name="dark_sky_blue_075">#c059aade</color>
+    <color name="greyish_brown">#454545</color>
+    <color name="brownish_grey">#747474</color>
+    <color name="brown_grey">#acacac</color>
+    <color name="dark_slate_blue_dark">#0f2b43</color>
+    <color name="dark_slate_blue">#204974</color>
+    <color name="kermit_green">#5aaf00</color>
+    <color name="kermit_green_07">#b35aaf00</color>
+    <color name="ocean_blue">#026b9a</color>
+    <color name="very_light_pink">#d8d8d8</color>
+    <color name="dull_orange">#eb872f</color>
+    <color name="warm_grey">#a18e86</color>
+    <color name="pale_aqua">#c0eae2</color>
+    <color name="peach">#fdc680</color>
+    <color name="pale_teal">#8fb9a9</color>
+    <color name="light_peach">#f6c9bf</color>
+    <color name="light_blue_grey">#c8c9cc</color>
+    <color name="white">#ffffff</color>
+
+    <color name="global_black">#000000</color>
+    <color name="global_white">#ffffff</color>
+    <color name="global_background">#fbfbfb</color>
+    <color name="global_grey">#d4d4d4</color>
+</resources>

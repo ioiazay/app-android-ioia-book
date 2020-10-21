@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.ioia.book.utang.add.contact.ContactViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".utang.add.contact.ContactActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:titleTextColor="@color/global_white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:paddingHorizontal="@dimen/spacing_large"
+                android:paddingBottom="@dimen/spacing_large"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    app:hintEnabled="false"
+                    app:hintAnimationEnabled="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:inputType="textCapWords"
+                        android:text="@={viewmodel.name}"
+                        android:hint="Masukkan nama pelanggan"
+                        android:drawableStart="@drawable/ic_account_box"
+                        android:drawablePadding="@dimen/spacing_large"
+                        android:drawableTint="@color/colorPrimary"
+                        android:backgroundTint="@color/global_white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_account_box" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_weight="1.5"
+                        app:hintEnabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:hint="+62"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:clickable="true"
+                            android:drawableStart="@drawable/ic_perm_phone_msg"
+                            android:drawableTint="@color/colorPrimary"
+                            android:drawablePadding="@dimen/spacing_large"
+                            android:drawableEnd="@drawable/ic_keyboard_arrow_down"
+                            android:backgroundTint="@color/global_white"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_perm_phone_msg"
+                            android:drawableRight="@drawable/ic_keyboard_arrow_down" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginLeft="@dimen/spacing_middle"
+                        android:layout_weight="1"
+                        app:hintEnabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:inputType="phone"
+                            android:text="@={viewmodel.phone}"
+                            android:layout_marginTop="3dp"
+                            android:hint="No telp (tidak wajib)"
+                            android:backgroundTint="@color/global_white"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:onClick="@{viewmodel::insertCustomer}"
+                    android:layout_marginTop="@dimen/spacing_xlarge"
+                    android:text="Lanjut"
+                    android:backgroundTint="@color/sunflower_yellow_gold"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

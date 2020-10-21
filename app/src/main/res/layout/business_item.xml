@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_main"
+    android:gravity="center"
+    android:padding="@dimen/spacing_large"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:src="@drawable/store"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/semi_bold_18_black"
+        android:layout_marginLeft="@dimen/spacing_large"
+        android:text="Business Name"
+        android:textAllCaps="false"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/iv_status"
+        android:src="@drawable/business_item_stat_selector"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+
+</LinearLayout>

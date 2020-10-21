@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewmodel"
+            type="com.ioia.book.utang.add.AddViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".utang.add.AddActivity">
+
+       <androidx.core.widget.NestedScrollView
+           android:background="@color/global_background"
+           app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <LinearLayout
+               android:orientation="vertical"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+                <LinearLayout
+                   android:gravity="center"
+                   android:background="@color/colorPrimary"
+                   android:orientation="horizontal"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <ImageView
+                       android:id="@+id/tv_on_back"
+                       android:layout_marginHorizontal="@dimen/spacing_middle"
+                       android:src="@drawable/ic_arrow_back"
+                       android:layout_width="30dp"
+                       android:layout_height="30dp"/>
+
+                   <com.google.android.material.textfield.TextInputLayout
+                       android:id="@+id/til_search_customer"
+                       app:hintEnabled="false"
+                       app:endIconMode="clear_text"
+                       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                       android:layout_margin="@dimen/spacing_middle"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:hint="Cari Pelanggan"
+                           android:inputType="text"
+                           android:background="@color/global_white"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"/>
+
+                   </com.google.android.material.textfield.TextInputLayout>
+
+               </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:onClick="@{viewmodel::addNewContactAction}"
+                        android:background="@color/global_white"
+                        android:padding="@dimen/spacing_middle"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp">
+
+                            <ImageView
+                                android:src="@drawable/ic_lens"
+                                android:tint="@color/sunflower_yellow_gold"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"/>
+
+                            <ImageView
+                                android:padding="@dimen/spacing_middle"
+                                android:src="@drawable/ic_person_add"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"/>
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/spacing_large"
+                            android:layout_weight="1"
+                            android:text="Tambah Pelanggan Baru"
+                            style="@style/semi_bold_16_sunflower_yellow_gold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <ImageView
+                            android:src="@drawable/arrow_right_grey"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+               <TextView
+                   android:layout_margin="@dimen/spacing_middle"
+                   android:text="Daftar Pelanggan"
+                   style="@style/semi_bold_14_black"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+               <androidx.recyclerview.widget.RecyclerView
+                   android:id="@+id/rv_contact"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
+
+       </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

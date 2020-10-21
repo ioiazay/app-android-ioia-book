@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.ioia.book.auth.login.LoginViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".auth.login.LoginActivity">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_large"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/label_phone_verf"
+                style="@style/semi_bold_30_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="@dimen/spacing_large"
+                style="@style/semi_bold_16_greyish_brown"
+                android:text="@string/label_send_otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="@dimen/spacing_xlarge"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/ll_phone"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@mipmap/ic_launcher"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp" />
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/spacing_large"
+                        style="@style/semi_bold_26_black"
+                        android:text="+62"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:src="@drawable/arrow_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout"
+                    android:layout_marginLeft="@dimen/spacing_medium"
+                    android:hint="No Telp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:inputType="number"
+                        android:text="@={viewmodel.phone}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_wa"
+                app:backgroundTint="@color/global_grey"
+                android:clickable="false"
+                android:onClick="@{viewmodel::addAccount}"
+                android:paddingVertical="@dimen/spacing_middle"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:text="@string/label_use_wa"
+                app:icon="@drawable/ic_perm_phone_msg"
+                app:iconGravity="textStart"
+                android:textAllCaps="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.button.MaterialButton
+                app:backgroundTint="@color/global_grey"
+                android:clickable="false"
+                android:id="@+id/btn_sms"
+                android:onClick="@{viewmodel::addAccount}"
+                android:paddingVertical="@dimen/spacing_middle"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="@string/label_use_sms"
+                app:icon="@drawable/ic_message"
+                app:iconGravity="textStart"
+                android:textAllCaps="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
